@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
+    <style>
+      body{
+  background-color:#2a472c;
+}
+
+header{
+  font-family:Roboto;
+  font-size:26px;
+  color: #FFF;
+  font-weight:bold;
+  text-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+#survey-form{
+  background-color:#FFFFFF;
+  font-family:Quicksand;
+  max-width:70%;
+  margin:auto;
+  padding:0;
+  border-radius:15px;
+}
+
+#description{
+  text-align:center;
+  font-size:16px;
+  padding-top:17px;
+  font-weight:bold;
+}
+
+.fieldset{
+  border-width:0;
+  padding-top:1%;
+
+}
+
+.sub-group{
+  position:relative;
+  right:30px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:1%;
+}
+
+label.left{
+  width:30%;
+  padding-right:4%;
+  text-align:right;
+}
+
+
+.right{
+  width:30%;
+}
+
+.input-field{
+  height:20px;
+  padding:5px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+#dropdown{
+  font-family:Quicksand;
+  height:30px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+.checkbox{
+  position:relative;
+  padding:3px;
+  right:3px;
+  bottom:15px;
+}
+
+.radio{
+  position:relative;
+  padding:3px;
+  bottom:15px;
+}
+
+h2{
+  position:relative;
+  bottom:8px;
+  font-size:16px;
+  text-align:center;
+  font-weight:bold;
+}
+
+.commentbox{
+  text-align:center;
+}
+
+textarea{
+  width:65%;
+  border-radius:4px;
+}
+
+#submit{
+  background:#31a94f;
+  font-family:Roboto;
+  border-radius:4px;
+  font-size:23px;
+}
+
+label:hover{
+  cursor:pointer;
+}
+
+@media (max-width: 800px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 580px) {
+  body {
+    font-size: 9px;
+  }
+}
+    </style>
+  </head>
+  <body>
+  <header>
+  <div id="title"><h1>Survey Form</h1>
+    </header>
+
+<form id="survey-form">
+
+  <div id="description"> Let us know how we can improve our service</div><br>
+
+  <fieldset class="fieldset">
+
+    <div class="sub-group">
+      <label class="left" id="name-label" for="name">Temprature</label>
+    <input type="text" name="customer-name" class="right input-field" id="name" placeholder="Enter Temprature" required>
+    </div>
+
+    <div class="sub-group">
+      <label class="left" id="email-label" for="email">Humidity</label>
+    <input type="email" name="Email-address" class="right input-field" placeholder="Humidity Level" id="email" required>
+    </div>
+
+    <div class="sub-group">
+      <label  class="left" id="number-label" for="number">Nitrogen (N)</label>
+    <input type="number" name="Age" placeholder="N" min="1" max="100" class="right input-field" id="number">
+  </div>
+
+    <div class="sub-group">
+      <label class="left" id="handphone-label" for="handphone">Phosphorus (P)</label>
+      
+
+    <input type="text" placeholder=" P " class="right input-field" id="handphone">
+  </div>
+
+  <div class="sub-group">
+    <label class="left" id="handphone-label" for="handphone">Potassium (K)</label>
+    
+
+  <input type="text" placeholder=" K " class="right input-field" id="handphone">
+</div>
+<div class="sub-group">
+  <label class="left" id="handphone-label" for="handphone">Ph level:</label>
+  
+
+<input type="text" placeholder=" Enter ph level " class="right input-field" id="handphone">
+</div>
+
+    <div class="sub-group">
+      <label class="left" for="dropdown">Type of Crop</label>
+
+      <select class="right dropdown" id="dropdown" name="dropdown">
+        <option selected disabled>Select Type</option>
+        <option value="first">First-Timer</option>
+        <option value="never">Never Play Before</option>
+      </select>
+    </div>
+  </fieldset>
+
+  <fieldset class="fieldset">
+<div class="sub-group">
+<label class="left">
+  Rainfall:</label>
+
+ <ul style="list-style: none;" class="right">
+
+   <li class="checkbox"><label><input type="checkbox" name="game" value="exodus" >(<0.5 mm\h )</label></li>
+     <li class="checkbox"><label><input type="checkbox" name="game" value="alcatraz">(<0.5-2 mm\h )</label></li>
+     <li class="checkbox"><label><input type="checkbox" name="game" value="aokigahara" >(<2-6 mm\h )<label></li>
+     <li class="checkbox"><label><input type="checkbox" name="game" value="mausoleum" >(<6-10 mm\h )</label></li>
+     <li class="checkbox"><label><input type="checkbox" name="game" value="castiglione" >(<10-18 mm\h )</label></li>
+      <li class="checkbox"><label><input type="checkbox" name="game" value="castiglione" >(<18-30 mm\h )</label></li>
+        <li class="checkbox"><label><input type="checkbox" name="game" value="castiglione" >(>30 mm\h )</label></li>
+       </ul></div></fieldset>
+
+    <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio">Soil level:</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons" value="1" type="radio" class="recommendation">1</label></li>
+       <li class="radio"><label><input name="radio-buttons" value="2" type="radio" class="recommendation">2</label></li>
+       <li class="radio"><label><input name="radio-buttons" value="3" type="radio" class="recommendation">3</label></li>
+   </ul>
+  </div></fieldset>
+
+     <fieldset class="fieldset">
+   <h2>Any comments or suggestions?</h2>
+
+    <div class="commentbox">
+
+   <textarea rows="4"  placeholder="Enter your comment here..."></textarea>
+
+   <br></br>
+
+  <button id="submit" type="submit">Submit</button>
+       </div></fieldset>
+</form>
+</div>
+  </body>
+</html>
